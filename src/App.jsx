@@ -4,6 +4,10 @@ function App() {
     <>
       <div>
         <Hello />
+        <Hello />
+        <Hello />
+        <Hello />
+        <Hello />
       </div>
     </>
   )
