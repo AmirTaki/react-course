@@ -1,5 +1,13 @@
 export default function Fruit ({emoji, name, price}){
     return (
-        <li>{emoji} {name} ${price}</li>
+        <>
+            { price > 5 ? ( 
+                <li>
+                    {emoji} {name} ${price}
+                </li>
+            ) : (
+                ""
+            )}
+        </>
     )
 }

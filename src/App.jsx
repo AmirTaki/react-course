@@ -5,7 +5,7 @@ function App() {
   
   return (
     <>
-      <ConditionalComponent />
+      <Fruits />
     </>
   )
 }
