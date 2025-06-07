@@ -4,7 +4,6 @@ function App() {
     <>
       <div>
         <Hello name = "amir" message = "hi there" emoji = "👋"/>
-        <Hello name = "mani" message = "hi there" emoji = "👋"/>
       </div>
     </>
   )

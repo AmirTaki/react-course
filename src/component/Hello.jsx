@@ -1,9 +1,8 @@
-function Hello({name, message, emoji}) {
-    // console.log(props)
-    // const {name , message} = props;
+function Hello(props) {
+    props.name = "mani"; // warning : props is Immutability
     return (
         <>
-            <h1>{message} {emoji} {name} </h1>
+            <h1>{props.message} {props.emoji} {props.name} </h1>
         </>
     )
 }
