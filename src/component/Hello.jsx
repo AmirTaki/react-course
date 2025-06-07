@@ -1,18 +1,11 @@
-function Hello({message, emoji, name, seatNumbers} ) {
+function Hello({person}) {
     return (
         <>
-            <h1>{message} {emoji} {name} {seatNumbers}</h1>
+            <h1>{person.message} {person.emoji} {person.name} {person.seatNumbers}</h1>
         </>
     )
 }
 
-export const Another = (props) =>{
-    return(
-        <>
-            <h1>{props.person.message} {props.person.emoji} {props.person.name} {props.person.seatNumbers}</h1>
-        </>
-    )
-}
 
 
 
