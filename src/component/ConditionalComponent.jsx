@@ -2,20 +2,14 @@ import Wellcome from "./Wellcome";
 import Code from "./Code";
 
 export default function ConditionalComponent (){
-    const display = false;
-
+    let message ;
+    const display = true;
     if(display){
-        return <Wellcome />
+        message = <h1>This is message 1</h1>;
     }
     else {
-        return <Code />
+        message = <h1>This is message 2</h1>
     }
-    
-   
-    // return (
-    //     <>
-    //         <h3>This is a conditional component</h3>
-    //         <h3>Code everday !</h3>
-    //     </>
-    // )
+    return message;
 }
+// https://www.youtube.com/watch?v=beWzxkM6wQw
