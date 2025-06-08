@@ -5,12 +5,14 @@ import Fruits from "./component/Fruits"
 import Hello from "./component/Hello"
 import InlineComponent from "./component/InlineComponent"
 import Message from "./component/Message"
+import OulineComponent from "./component/OutlineComponent"
 
 function App() {
   
   return (
     <>
       <InlineComponent />
+      <OulineComponent />
     </>
   )
 }
