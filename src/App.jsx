@@ -1,21 +1,13 @@
-import { createContext,useState  } from "react"
+import { UserProvider } from "./context/UserContext"
+import Login from "./Login"
 import Checkout from "./Checkout"
-import Login from "../Login"
-
-
-export const userContext = createContext("")
 
 function App() {
-  const [user, setUser] =  useState('guest')
   return (
-    <>
-      {/* <input type="text" value = {user}  onChange={(e)=>{setUser(e.target.value)}}/> */}
-      
-      <userContext.Provider value = {{user, setUser}}>
-        <Login />
-        <Checkout />
-      </userContext.Provider>
-    </>
+    <UserProvider>
+      <Login />
+      <Checkout />
+    </UserProvider>
   )
 }
 

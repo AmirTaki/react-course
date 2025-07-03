@@ -1,9 +1,9 @@
 import { useContext, useState } from "react"
-import { userContext } from "./src/App"
+import { UserContext } from "./context/UserContext"
 
 export default function Login (){
     const [value, setValue] = useState("")
-    const {user, setUser}  = useContext(userContext)
+    const {user, setUser}  = useContext(UserContext)
     function henadleSubmit (e) {
         e.preventDefault()
         setUser(value)
