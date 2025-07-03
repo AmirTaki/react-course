@@ -1,29 +1,34 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom"
-import Homepage from "./pages/Homepage"
-import Dashboard from "./pages/Dashboard"
-import PageNotFound from "./pages/PageNotFound"
-import Navbar from "./Navbar"
-import Settings from "./pages/Settings"
-import Profile from "./pages/Profile"
-import Products from "./pages/Products"
+import { createContext,useState  } from "react"
+import Checkout from "./Checkout"
+import Login from "../Login"
+
+
+export const userContext = createContext("")
 
 function App() {
-
+  const [user, setUser] =  useState('guest')
   return (
-    <BrowserRouter>
-      <Navbar />
-      <Routes>
-        <Route path = "/" element = {<Homepage/>}  />  
-        <Route path = "/products/:id" element = {<Products />}/>
-        <Route path = "/dashboard" element ={<Dashboard />} > 
-          <Route path = "settings" element = {<Settings />} />
-          <Route path  = "profile"  element = {<Profile />}/>
-        </Route>
-        <Route path = "*" element = {<PageNotFound />} />
-      </Routes>
-    </BrowserRouter>
+    <>
+      {/* <input type="text" value = {user}  onChange={(e)=>{setUser(e.target.value)}}/> */}
+      
+      <userContext.Provider value = {{user, setUser}}>
+        <Login />
+        <Checkout />
+      </userContext.Provider>
+    </>
   )
 }
 
 export default App
 
+/*
+
+STEPS INVOLVED WIDTH CONTEXT 
+
+
+. Creating context
+. Providing context
+. Consuming context
+. Updating contect
+
+*/
