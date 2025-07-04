@@ -3,10 +3,9 @@ import { UserContext } from "./context/UserContext"
 
 export default function Login (){
     const [value, setValue] = useState("")
-    const {user, dispatch}  = useContext(UserContext)
+    const {state, dispatch}  = useContext(UserContext)
     function henadleSubmit (e) {
         e.preventDefault()
-        // setUser(value)
         dispatch({type : "login", payload :value})
     }
     return (
