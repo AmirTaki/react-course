@@ -1,19 +1,12 @@
-import { useState } from "react"
-import useDisplayMessage from "./hooks/useDisplayMessage"
-
+import Login from "./pages/Login"
 
 function App() {
   
-  // const [state] = useState()
-  // const [DisplayMessage] = useDisplayMessage()
-  // const message =  DisplayMessage()
-
-  const [message, displayMessage] = useDisplayMessage()
-  displayMessage()
-
-  return (<>
-    message is :  {message}
-  </>)
+  return (
+  <>
+    <Login />
+  </>
+  )
 }
 
 export default App
